@@ -174,7 +174,7 @@ export class RoutingAPIPipeline extends Stack {
     const prodUsEast2Stage = new RoutingAPIStage(this, 'prod-us-east-1', {
       env: { account: '846585797454', region: 'us-east-1' },
       jsonRpcProviders: jsonRpcProviders,
-      provisionedConcurrency: 100,
+      provisionedConcurrency: 20,
       ethGasStationInfoUrl: ethGasStationInfoUrl.secretValue.toString(),
       chatbotSNSArn: 'arn:aws:sns:us-east-1:846585797454:SlackChatbotTopic',
       stage: STAGE.PROD,
